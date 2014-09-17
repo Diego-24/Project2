@@ -92,7 +92,7 @@ img {
 }
 
 #slide3:before {
-  background-image: url("");
+  background-image: url("img/metal background.jpg");
   transform: translateZ(-1px) scale(2);
   z-index:-1;
 }
