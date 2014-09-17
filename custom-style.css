@@ -40,10 +40,6 @@ img {
   text-align: center;
 }
 
-img:last-of-type {
-  transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
-}
-
 .slide:before {
   content: "";
   position: absolute;
@@ -83,12 +79,12 @@ img:last-of-type {
 }
 
 #title {
-  background-image: url("http://lorempixel.com/output/abstract-q-c-640-480-6.jpg");
+  background-image: url("img/construction design.jpg");
    background-attachment: fixed;  
 }
 
 #slide1:before {
-  background-image: url("http://lorempixel.com/output/abstract-q-c-640-480-4.jpg");
+  background-image: url("img/background pattern.jpg");
   transform: translateZ(-1px) scale(2);
   z-index:-1;
 }
