@@ -81,7 +81,7 @@ img {
 }
 
 #slide1:before {
-  background-image: url("img/background pattern.jpg");
+  background-image: url("img/wood background.jpg");
   transform: translateZ(-1px) scale(2);
   z-index:-1;
 }
