@@ -100,3 +100,12 @@ img {
 #slide4 {
   background: #222;
 }
+
+@media screen and (max-width: 959px) {
+  #title {
+    width: 100%;
+  }
+  .slide {
+    width: 100%;
+  }  
+}
