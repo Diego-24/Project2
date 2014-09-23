@@ -31,6 +31,10 @@ h3{
   color: black;
 }
 
+.container{
+
+}
+
 *{
   box-sizing:border-box;
   -moz-box-sizing:border-box;
@@ -87,8 +91,7 @@ a{
     -ms-transform: translate(250px, 0px);
     transform: translate(250px, 0px);
 }
-#header{
-}
+
 .stuck-head{
   position: fixed;
   right: 0;
