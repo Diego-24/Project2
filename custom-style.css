@@ -32,7 +32,11 @@ h3{
 }
 
 .container{
+  border-color: blue;
+}
 
+.row{
+  border-color: red;
 }
 
 *{
