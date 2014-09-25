@@ -26,6 +26,7 @@ body {
 
 h1 {
    font-size: 250%;
+   font-family: 'Doppio One', sans-serif;
    color: black;
 }
 
@@ -37,6 +38,7 @@ p {
 }
 
 h2{
+  font-family: 'Doppio One', sans-serif;
   color: black;
   background: rgba(260,230,220, .6);
   padding: 5px 5px 5px 5px;
