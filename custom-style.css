@@ -37,7 +37,7 @@ p {
   color: black;
 }
 
-h2{
+h3{
   font-family: 'Doppio One', sans-serif;
   color: black;
   background: rgba(260,230,220, .6);
@@ -196,6 +196,7 @@ a{
 
 img {
   text-align: center;
+  margin-top: 50px;
 }
 
 .slide:before {
