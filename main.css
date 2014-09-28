@@ -1,26 +1,51 @@
-html{
-	height: 100%;
+/*no change*/
+@import url(http://fonts.googleapis.com/css?family=Nunito);
+
+html {
+  height: 100%;
+  /*without overflow, it just screws up all the slides*/
+  overflow: hidden;
 }
 
-h2{
+body { 
+  /*no change*/
+  margin:0;
+  /*no change*/
+  padding:0;
+  /*without perspective, second and fourth slide aren't parellax*/
+  perspective: 1px;
+  /*no change*/
+  transform-style: preserve-3d;
+  height: 100%;
+  /*no change*/
+  overflow-y: scroll;
+  /*without overflow x, it scrolls to right on phone*/
+  overflow-x: hidden;
+  font-family: Nunito;
+}
+
+h1 {
+   font-size: 250%;
+   font-family: 'Doppio One', sans-serif;
+   color: black;
+}
+
+p {
+  font-size: 155%;
+  /*no change*/
+  line-height: 150%;
   color: black;
 }
 
-p{
-	font-size: 140%;
-	color: black;
+h4{
+  font-family: 'Doppio One', sans-serif;
+  color: black;
+  background: rgba(260,230,220, .6);
+  padding: 5px 5px 5px 5px;
+  border-radius: 40px;
 }
 
-.container{
-  border-color: blue;
-  background-color: green;
-}
-
-.row{
-  border-color: red;
-  background-color: yellow;
-}
-
+/*start of hamburger code*/
 *{
   box-sizing:border-box;
   -moz-box-sizing:border-box;
@@ -151,21 +176,116 @@ a{
 #footer{
   text-align:center;
 }
+/*end of hamburger code*/
+
+.slide {
+  /*without positive, slide 4 isn't appearing and slide 2 is fading away*/
+  position: relative;
+  /*without padding, text isn't centered*/
+  padding: 25vh 10%;
+  /*sets the minumum height each slide can be*/
+  min-height: 100vh;
+  width: 100vw;
+  /*no change*/
+  box-sizing: border-box;
+  /*no change*/
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+  /*no change*/
+  transform-style: inherit;
+}
+
+img {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.slide:before {
+  /*without any of the below, slide 2 and 4 aren't appearing*/
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+}
+
+.title {
+  text-align: center;
+  background: rgba(260,230,220, .6);
+  padding: 5px 5px 5px 5px;
+  border-radius: 40px;
+}
+
+.slide:nth-child(2n) .title {
+  /*no change*/
+  margin-left: 0;
+  /*no change*/
+  margin-right: auto;
+} 
+
+.slide:nth-child(2n+1) .title {
+  /*no change*/
+  margin-left: auto;
+  /*no change*/
+  margin-right: 0;
+}
+
+.slide, .slide:before {
+  /*repeats smaller pictures*/
+  background: 50% 50% / cover;  
+}
+
+.header {
+  text-align: center;
+}
+
+#title {
+  background-image: url("img/DisneyLobby1.jpg");
+  background-attachment: fixed;  
+}
+
+#slide1:before {
+  background-image: url("img/IMG_2312.JPG");
+  /*without transform, second slide isn't parellax*/
+  transform: translateZ(-1px) scale(2);
+  /*without index, second slide overlaps first slide*/
+  z-index:-1;
+}
+
+#slide2 {
+  background-image: url("img/DisneyOffice2.jpg");
+  background-attachment: fixed;
+}
+
+#slide3:before {
+  background-image: url("img/wall and waiting.jpg");
+  max-height: 125vh;
+  /*without transform, last slide isn't parellax*/
+  transform: translateZ(-1px) scale(2);
+  /*without index, last slide overlaps third slide*/
+  z-index:-1;
+}
 
 @media screen and (max-width: 959px) {
-	.container{
-		width: 100%;
-	}
-	.row{
-		width: 100%;
-	}
+  #title {
+    width: 100%;
+  }
+  .slide {
+    width: 100%;
+  }  
+  img {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 320px) {
-	.container{
-		width: 100%;
-	}
-	.row{
-		width: 100%;
-	}
+  #title {
+    width: 100%;
+  }
+  .slide {
+    width: 100%;
+  }  
+  img {
+    width: 100%;
+  }
 }
